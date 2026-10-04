@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace DomruAPI.Other
+namespace DomruAPI.Other.Http
 {
     internal class AuthDataFactory
     {

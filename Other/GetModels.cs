@@ -11,10 +11,13 @@ namespace DomruAPI.Other
 
         public Camera Camera { get; set; }
 
-        public GetModels()
+        public UserAccount User { get; set; }
+
+        internal GetModels()
         {
             Auth = new Auth();
             Camera = new Camera();
+            User = new UserAccount();
         }
     }
 }

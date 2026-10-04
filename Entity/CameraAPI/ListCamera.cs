@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace DomruAPI.Model
+namespace DomruAPI.Entity.CameraAPI
 {
     public class ListCamera
     {
         [JsonPropertyName("data")]
         public List<DataCamera> Data { get; set; }
-        
-        public ListCamera() { }
     }
 
     public class DataCamera
@@ -53,5 +51,22 @@ namespace DomruAPI.Model
 
         [JsonPropertyName("ParentID")]
         public string ParentID { get; set; }
+
+        public override string ToString()
+        {
+            return $"ID: {ID},\n" +
+                               $"Name: {Name},\n" +
+                               $"IsActive: {IsActive},\n" +
+                               $"IsSound: {IsSound},\n" +
+                               $"RecordType: {RecordType},\n" +
+                               $"Quota: {Quota},\n" +
+                               $"MaxBandwidth: {MaxBandwidth ?? "null"},\n" +
+                               $"HomeMode: {HomeMode},\n" +
+                               $"Devices: {Devices ?? "null"},\n" +
+                               $"State: {State},\n" +
+                               $"TimeZone: {TimeZone},\n" +
+                               $"MotionDetectorMode: {MotionDetectorMode},\n" +
+                               $"ParentID: {ParentID}";
+        }
     }
 }

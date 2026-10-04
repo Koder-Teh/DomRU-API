@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace DomruAPI.Model
+namespace DomruAPI.Entity.AuthAPI
 {
     public class Token
     {
@@ -28,7 +28,5 @@ namespace DomruAPI.Model
 
         [JsonPropertyName("refreshExpiresIn")]
         public int? RefreshExpiresIn { get; set; }
-
-        public Token() { }
     }
 }
